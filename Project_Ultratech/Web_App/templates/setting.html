@@ -1,0 +1,602 @@
+{% extends 'Side_bar_Common_layout.html' %}
+{% load static %}
+{% block title %}Setting Page{% endblock %}
+{% block content %}
+
+<center><div class="">
+    <span style='font-size:48px;color:rgb(174, 64, 64)'> Settings</span></center>
+    <br><br>
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Settings</li>
+        </ol>
+        
+     
+        <form onsubmit="" name="form1" id="form1" method="post">
+            <div class='row'>
+                <div class='col-sm-12 col-md-3 col-lg-3 col-12'>
+                    
+                    <div class="" style="max-width: 38rem;">
+                        <h6 style='font-size:16px;color:rgb(0,0,0)'>Video Resolution</h6>
+
+                        <div class="slidecontainer">
+                          <input type="range" min="320" max="1020" value="566" class="slider" id="myRange">
+                          <h6>Value: <span id="demo"></span></h6>
+                        </div>
+                    </div>
+                     
+                     
+                        
+                </div>
+                
+                <div class='col-sm-12 col-md-3 col-lg-3 col-12'>
+                    
+                    <div class="" style="max-width: 38rem;">
+                        <h5 style='font-size:16px;color:rgb(0, 0, 64)'>Detection confidence threshold</h5>
+
+                        <div class="slidecontainer">
+                          <input type="range" min="0.18" max="0.99" value="0.36" step="0.01"class="slider" id="myRange1">
+                          <h6>Value: <span id="demo1"></span></h6>
+                        </div>
+                     </div>
+                     
+                     
+                        
+                </div>
+                
+                <div class='col-sm-12 col-md-12 col-lg-6 col-12'>
+                    <div class=""><style="max-width: 48rem;">
+                        <h6 style='font-size:16px;color:color:rgb(0,0,0)' >Email/SMS Configuration</h6>
+                        <div class='col-sm-12 col-md-4 col-lg-4 col-12'>
+                            <button type="button" class="btn btn-info" style="width : 18 rem;min-width: 12rem; height:5rem;"   id="myBtn_up">View Status</button>
+                        </div>
+                        
+                        <!--div class="content modal col-sm-12 col-md-6 col-lg-6 col-12 m_row" id="myModal_up" >
+                        
+                        <center>
+                            
+                            <form action="/action_page.php">
+                                
+                                <div class="row row_1 col-75">
+                                    <div class="col-25">
+                                        <label style="color:#04AA6D">View All Data</label>
+                                        <span class="close" style='color:red; font-size: 38px;'>&times;</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-25">
+                                    <pre>
+                                        <div class="vertical-menu">
+                                            <code class="prettyprint">
+                                                ('imranShariffhs@gmail.com'),
+                                                ('irfanshariffhs@gmail.com'),
+                                            </code>
+                                        </div>
+                                    </pre>
+                                    
+                                </div>
+                                
+                            </form>
+                        </center>
+                        </div-->
+                        
+                        <div class='col-sm-12 col-md-4 col-lg-4 col-12'>
+                            <button type="button" class="btn btn-info" style="width : 18 rem;min-width: 12rem; height:5rem;">View Details</button>
+                        </div>
+                        <div class='col-sm-12 col-md-4 col-lg-4 col-12'>
+                            <button type="button" class="btn btn-info" style="width : 18 rem;min-width: 12rem; height:5rem;">Update SMTP</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--div class='col-sm-12 col-md-3 col-lg-3 col-12'>
+                    
+                    <div class="card border-primary bg-primary mb-3" style="max-width: 38rem;">
+                        
+                        
+                     </div>
+                     
+                     
+                        
+                </div-->
+            </div>
+            <!-- Second Head Line--->
+            <br><br>
+            <div class='row'>
+                <div class='col-sm-12 col-md-3 col-lg-3 col-12'>
+                    <div class="" style="max-width: 38rem;">
+                        <label for="inlineCheckbox1" class="form-check-label" style='font-size:12px;color:rgb(0,0,0)'> Clear Cache On Exit And Color Channel</label>
+                        <div class='row'>
+                            &nbsp;&nbsp;
+                            <input type="checkbox" checked data-toggle="toggle" data-onlabel="BGR" data-offlabel="RGB" data-onstyle="success" data-offstyle="danger" id="X">
+                            &nbsp;
+                            <input type="checkbox"  data-toggle="toggle" data-width="100" data-on="ON" data-off="OFF">
+                        </div>
+                        <div class='row'>
+                            
+                            <input class="form-check-input " type="checkbox" id="flexSwitchCheckReverse" style=''>
+                             <label class="form-check-label label_value" for="flexSwitchCheckReverse" style=''>Enable auto page layout to wide</label>
+                        </div>
+                    </div>
+                     
+                     
+                        
+                </div>
+                
+                <div class='col-sm-12 col-md-3 col-lg-3 col-12'>
+                    
+                    <div class="" style="max-width: 38rem;">
+                        <h6 style='font-size:16px;color:rgb(0,0,0)'>Alter Threhold Count</h6>
+
+                        <div class="slidecontainer">
+                          <input type="range" min="10" max="1000" value="137" step="1"class="slider" id="myRange2" style="color:rgb(255,0,0)">
+                          <h6>Value: <span id="demo2"></span></h6>
+                        </div>
+                     
+                        <!--label for="customRange3" class="form-label">Example range</label>
+                        <input id="range1" 
+                               min="5" 
+                               max="10" 
+                               type="range" 
+                               class="form-range" />
+                        <h4>
+                            Current Value:
+                            <span id="curr" style="color:red;"></span>
+                        </h4-->
+                        
+                     </div>
+                     
+                     
+                        
+                </div>
+                
+                <div class='col-sm-12 col-md-6 col-lg-6 col-12'>
+                    
+                    <div class="" style="max-width: 58rem;">
+                        <h6 style='font-size:20px;color:rgb(0,0,0)' >Add Email Recipients</h6>
+                        <div class='col-sm-12 col-md-4 col-lg-4 col-12'>
+                            <!--button type="button" class="btn btn-warning" style="width : 18 rem;min-width: 16rem; height:5rem;">             Info</button-->
+                            <button type="button" class="btn btn-warning btn_m" style="width : 18 rem;min-width: 12rem; height:5rem;" id="myBtn_1">View All</button>
+                        </div>
+                            <!-- The Modal -->
+                            <!--div id="myModal" class="modal">
+
+                              <!-- Modal content >
+                              <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>Some text in the Modal..</p>
+                                <form action="/action_page.php">
+                                  <label for="fname">First name:</label><br>
+                                  <input type="text" id="fname" name="fname" value="John"><br>
+                                  <label for="lname">Last name:</label><br>
+                                  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                                  <input type="submit" value="Submit">
+                                </form> 
+                              </div>
+
+                            </div-->
+                            
+                        <div class="content modal col-sm-12 col-md-6 col-lg-6 col-12 m_row" id="myModal_1" >
+                        
+                        <center>
+                            
+                            <form action="/action_page.php">
+                                
+                                <div class="row row_1 col-75">
+                                    <div class="col-25">
+                                        <label style="color:#04AA6D">View All Data</label>
+                                        <span class="close" style='color:red; font-size: 38px;'>&times;</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-25">
+                                    <!--pre-->
+                                        <div class="vertical-menu">
+                                            <code class="prettyprint">
+                                                ('imranShariffhs@gmail.com'),
+                                                ('irfanshariffhs@gmail.com'),
+                                            </code>
+                                        </div>
+                                    <!--/pre-->
+                                    
+                                </div>
+                                
+                            </form>
+                        </center>
+                        </div>
+                        
+                        <div class='col-sm-12 col-md-4 col-lg-4 col-12'>
+                            <button type="button" class="btn btn-warning btn_m" style="width : 18 rem;min-width: 12rem; height:5rem;" id="myBtn">Add New</button>
+                        </div>
+                        
+                        <div class="content modal col-sm-12 col-md-6 col-lg-6 col-12 m" id="myModal" >
+                        
+                        <center>
+                            
+                            <form action="/action_page.php">
+                                
+                                <div class="row row_1 col-75">
+                                    <div class="col-25">
+                                        <label style="color:#04AA6D">Add New Recipients</label>
+                                        <span class="close" style='color:red; font-size: 38px;'>&times;</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-25">
+                                    
+                                    <label for="email" >Email</label>
+                                    <input type="email" id="fname" name="firstname" placeholder="   Add You'rs Email ...">
+                                
+                                </div>
+                                <div class="col-25">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                              </div>
+                            </form>
+                        </center>
+                        </div>
+                        <div class='col-sm-12 col-md-4 col-lg-4 col-12'>
+                            <button type="button" class="btn btn-warning btn_m" style="width : 18 rem;min-width: 12rem; height:5rem;" id="myBtn_2">Remove</button>
+                        </div>
+                        
+                        <div class="content modal col-sm-12 col-md-6 col-lg-6 col-12 m" id="myModal_2" >
+                        
+                        <center>
+                            
+                            <form action="/action_page.php">
+                                
+                                <div class="row row_1 col-75">
+                                    <div class="col-25">
+                                        <label style="color:#04AA6D">Remove Email Recipients</label>
+                                        <span class="close" style='color:red; font-size: 38px;'>&times;</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-25">
+                                    
+                                    <label for="email" >Email</label>
+                                    <input type="email" id="fname" name="firstname" placeholder="   Add You'rs Email ...">
+                                
+                                </div>
+                                <div class="col-25">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                              </div>
+                            </form>
+                        </center>
+                        </div>
+                        
+                     </div>							
+                </div>
+                
+                <!--div class='col-sm-12 col-md-3 col-lg-3 col-12'>
+                    
+                    <div class="card border-body bg-body mb-3" style="max-width: 38rem;">
+                        
+                        
+                     </div>
+                </div-->
+            </div>
+            
+            <!-- Three Head Line--->
+            <br><br>
+            <div class='row'>
+                <div class='col-sm-12 col-md-3 col-lg-3 col-12'>
+                    
+                    <div class="" style="max-width: 38rem;">
+                        
+                        <div class='row'>
+                            
+                            &nbsp;&nbsp;<h5 style='font-size:16px;color:rgb(0,0,0)'>Max Video Inputs</h5>
+                            &nbsp;&nbsp;<input type="checkbox"  data-toggle="toggle" data-width="100" data-on="4" data-off="6">
+                        </div>
+                            
+                        
+                        
+                        
+                     </div>
+                     
+                     
+                     
+                        
+                </div>
+                
+                <div class='col-sm-12 col-md-3 col-lg-3 col-12'>
+                    
+                    <div class="" style="max-width: 38rem;">
+                        
+                        
+
+                        <div class="slidecontainer">
+                            <h5 style='font-size:16px;color:rgb(0,0,0)'>Alter Time Interval</h5>
+                          <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
+                          <h6>Value: <span id="demo3"></span></h6>
+                        </div>
+                     </div>
+                     
+                     
+                     
+                        
+                </div>
+                
+                <div class='col-sm-12 col-md-3 col-lg-3 col-12'>
+                    
+                    <div class="" style="max-width: 38rem;">
+                        <h4 style='font-size:20px;color:rgb(0,0,0)'>Auto To Generate Incident Ticket</h4>
+                        <center><input type="checkbox"  data-toggle="toggle" data-width="100" data-on="ON" data-off="OFF" id="btn_x"></center>
+                        
+                        <div class='row'>
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+                            <label class="form-check-label label_value" for="flexSwitchCheckReverse" style='font-size:12px;color:rgb(0,0,0)'>Enable sound alter</label>
+                        </div>
+                     </div>
+                     
+                     
+                        
+                </div>
+                
+                <div class='col-sm-12 col-md-3 col-lg-3 col-12'>
+                    
+                    <div class="" style="max-width: 38rem;">
+                        
+                        <h4 style='font-size:20px;color:rgb(0,0,0)'>CAM Configure Of Online Stream</h4>
+                        <center><input type="checkbox"  data-toggle="toggle" data-width="100" data-on="ON" data-off="OFF"></center>
+                    
+                        <!--div class="checkbox">
+                          <label>
+                            <input type="checkbox" data-toggle="toggle">
+                            Option one is enabled
+                          </label> class="form-check-label label_value"
+                        </div-->
+                        <div class='row'>
+                            <input class="form-check-input" type="checkbox"  id="toggle-form"><!--id="flexSwitchCheckReverse"-->
+                            <label class="form-check-label label_value" for="flexSwitchCheckReverse" style='font-size:12px;color:rgb(0,0,0)'>Enable auto page layout to wide</label>
+                        </div></center>
+                        
+                        
+                        
+                     </div>
+                </div>
+            </div>
+            
+        <br><br><br><br>
+        <br>
+        <div class='col-sm-12 col-md-12 col-lg-12 col-12'>
+            
+            <div class='row'>
+                <center>
+                    
+                    <button type="button" class="btn btn-danger" type="reset">Reset All</button>
+                    <button type="button" class="btn btn-warning">Refresh Setting</button>
+                    <button type="button" class="btn btn-success">Submit</button>
+                </center>
+            </div>
+        </div>
+    </div>
+    </form>
+<script>
+  function myFunction() {
+    alert("I am an alert box!");
+  }
+    $(document).ready(function() {
+    $("#openModal").click(function() {
+      $("#myModal").show();
+    });
+  
+    $(".close").click(function() {
+      $("#myModal").hide();
+    });
+  });
+  
+  
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+    $(document).ready(function() {
+    $("#openModal_1").click(function() {
+      $("#myModal_1").show();
+    });
+  
+    $(".close").click(function() {
+      $("#myModal_1").hide();
+    });
+  });
+  
+  
+  
+  // Get the modal
+  var modal_1 = document.getElementById("myModal_1");
+  
+  // Get the button that opens the modal
+  var btn_1 = document.getElementById("myBtn_1");
+  
+  // Get the <span> element that closes the modal
+  var span_1 = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on the button, open the modal
+  btn_1.onclick = function() {
+    modal_1.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span_1.onclick = function() {
+    modal_1.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal_1) {
+      modal_1.style.display = "none";
+    }
+  }
+  $(document).ready(function() {
+    $("#openModal_2").click(function() {
+      $("#myModal_2").show();
+    });
+  
+    $(".close").click(function() {
+      $("#myModal_2").hide();
+    });
+  });
+  // Get the modal
+  var modal_2 = document.getElementById("myModal_2");
+  
+  // Get the button that opens the modal
+  var btn_2 = document.getElementById("myBtn_2");
+  
+  // Get the <span> element that closes the modal
+  var span_2 = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on the button, open the modal
+  btn_2.onclick = function() {
+    modal_2.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span_2.onclick = function() {
+    modal_2.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal_2) {
+      modal_2.style.display = "none";
+    }
+  }
+  
+   $(document).ready(function() {
+    $("#openModal").click(function() {
+      $("#myModal_up").show();
+    });
+  
+    $(".close").click(function() {
+      $("#myModal_up").hide();
+    });
+  });
+  
+  function myBtn_up() {
+        alert("This is a popup message!");
+      }
+  // Attach the showAlert function to the button click event
+  document.getElementById("myBtn_up").addEventListener("click", myBtn_up);
+  
+  /*// Get the modal
+  var modal_up = document.getElementById("myModal_up");
+  
+  // Get the button that opens the modal
+  var btn_up = document.getElementById("myBtn_up");
+  
+  // Get the <span> element that closes the modal
+  var span_up = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on the button, open the modal
+  btn_up.onclick = function() {
+    modal_up.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span_up.onclick = function() {
+    modal_up.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal_up) {
+      modal_up.style.display = "none";
+    }
+  }*/
+  
+  
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+  
+      slider.oninput = function() {
+      output.innerHTML = this.value;
+      }
+      var slider1 = document.getElementById("myRange1");
+      var output1 = document.getElementById("demo1");
+      output1.innerHTML = slider1.value;
+  
+      slider1.oninput = function() {
+      output1.innerHTML = this.value;
+      }
+      var slider2 = document.getElementById("myRange2");
+      var output2 = document.getElementById("demo2");
+      output2.innerHTML = slider2.value;
+  
+      slider2.oninput = function() {
+      output2.innerHTML = this.value;
+      }
+      var slider3 = document.getElementById("myRange3");
+      var output3 = document.getElementById("demo3");
+      output3.innerHTML = slider3.value;
+  
+      slider3.oninput = function() {
+      output3.innerHTML = this.value;
+      }
+      const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+  
+  
+  toggle.addEventListener("click", () => {
+      sidebar.classList.toggle("close");
+  })
+  
+  searchBtn.addEventListener("click", () => {
+      sidebar.classList.remove("close");
+  })
+  
+  modeSwitch.addEventListener("click", () => {
+      body.classList.toggle("dark");
+  
+      if (body.classList.contains("dark")) {
+          modeText.innerText = "Light mode";
+      } else {
+          modeText.innerText = "Dark mode";
+  
+      }
+  });
+  
+  $(document).ready(function() {
+      $('#example').DataTable();
+  } );
+  
+  var el = document.getElementById('curr');
+          var r = document.getElementById('myRange');
+          el.innerText = r.valueAsNumber;
+          r.addEventListener('change', () => {
+              el.innerText = r.valueAsNumber;
+          })
+      
+      
+</script>
+{% endblock %}
+

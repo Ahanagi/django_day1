@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery Website</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+	
+
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Video Gallery</div>
+            <div class="video-container">
+                <div class="video">
+                    <video src="" muted></video>
+                </div>
+
+                <div class="video">
+					
+                    <video src="" muted></video>
+                </div>
+
+                <div class="video">
+                    <video src="" muted></video>
+                </div>
+
+                <div class="video">
+                    <video src="" muted></video>
+                </div>
+
+                <div class="video">
+					
+                    <video src="" muted></video>
+                </div>
+
+                <div class="video">
+                    <video src="" muted></video>
+                </div>
+
+                <div class="video">
+					
+                    <video src="" muted></video>
+                </div>
+
+                <div class="video">
+                    <video src="" muted></video>
+                </div>
+
+
+                <div class="video">
+                    <video src="" muted></video>
+                </div>
+
+                <div class="video">
+                    <video src="" muted></video>
+                </div>
+
+                <div class="video">
+                    <video src="" muted></video>
+                </div>
+
+                <div class="video">
+                    <video src="" muted></video>
+                </div>
+				
+
+            </div>
+			<div class="row">
+				<center><button type="button" class="Button">Back Button</button></center>
+			</div>
+			<br><br>
+        </div>
+		
+
+<script>
+        var video=document.querySelectorAll('video')
+            video.forEach(play => play.addEventListener('click',()=>{
+                play.classList.toggle('active');
+
+                if(play.pause){
+                    play.play();
+                }
+                else{
+                    play.pause();
+                    play.currentTime = 0;
+                }
+            }));
+</script>
+    
+</body>
+</html>
